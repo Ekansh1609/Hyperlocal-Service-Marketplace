@@ -1,0 +1,437 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a00e0;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.search-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Make form elements stand out against the background */
+.search-box, .location-selector {
+  background: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 300px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.search-btn {
+  padding: 0 1.5rem;
+  background: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Services Section */
+.services-section, .professionals-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-section h2, .professionals-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+/* Add to your main.css */
+.service-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(74, 0, 224, 0.2);
+  background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
+  transform: perspective(1000px) rotateX(5deg) translateY(-5px);
+
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Optional: Add a subtle border animation */
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #4a00e0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.service-card:hover .service-icon {
+  animation: pulse 1s infinite;
+}
+/* Optional: Different colors for different services */
+.service-card[data-service="Plumbers"]:hover {
+  background: #f0f8ff;
+  border-color: #c7e3ff;
+}
+
+.service-card[data-service="Electricians"]:hover {
+  background: #fff8f0;
+  border-color: #ffddc7;
+}
+
+.service-card[data-service="Beauticians"]:hover {
+  background: #fff0f5;
+  border-color: #ffc7d9;
+}
+.service-card[data-service="AC Repair"]:hover {
+  background: #f0fff4;
+  border-color: #c7ffd7;
+}
+/* Auth Pages */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-link, .signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.login-link a, .signup-link a {
+  color: #4a00e0;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Professionals Section */
+.professionals-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows horizontal scrolling on mobile */
+}
+
+.professionals-grid {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1rem; /* Space for scrollbar */
+  scroll-snap-type: x mandatory;
+}
+
+.pro-card {
+  min-width: 280px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Hover Effects */
+.pro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 0, 224, 0.15);
+}
+
+.pro-card:hover .pro-photo {
+  transform: scale(1.05);
+}
+
+.pro-photo-container {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pro-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pro-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4a00e0;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.pro-content {
+  padding: 1.2rem;
+}
+
+.pro-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0.5rem 0;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.review-count {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.pro-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 0.8rem 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #4a00e0;
+}
+
+.book-btn {
+  background: #4a00e0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #3a00b8;
+  transform: translateY(-2px);
+}
+
+/* Scrollbar styling */
+.professionals-section::-webkit-scrollbar {
+  height: 6px;
+}
+
+.professionals-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.professionals-section::-webkit-scrollbar-thumb {
+  background: #4a00e0;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pro-card {
+    min-width: 240px;
+  }
+  
+  .professionals-section h2 {
+    font-size: 1.3rem;
+  }
+}
+/* Pulse animation on hover */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 0, 224, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(74, 0, 224, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 0, 224, 0); }
+}
+
+.pro-card:hover .book-btn {
+  animation: pulse 1.5s infinite;
+}
+
+/* Rating stars animation */
+.pro-card:hover .pro-rating {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
