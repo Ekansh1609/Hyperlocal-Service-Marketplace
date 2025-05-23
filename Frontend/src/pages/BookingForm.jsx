@@ -1,7 +1,6 @@
 // src/pages/BookingForm.jsx
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import professionData from "../data/ProfessionData";
 
 function BookingForm() {
   const { proId } = useParams();
