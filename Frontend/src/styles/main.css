@@ -482,3 +482,499 @@ body {
   transform: translateX(5px);
   transition: transform 0.3s ease;
 }
+
+/* Header Enhancements */
+.header.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #4a00e0;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4a00e0;
+}
+
+/* Hero Enhancements */
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.popular-tags {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Section Headers */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #4a00e0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Service Card Enhancements */
+.service-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-card-wrapper.active {
+  box-shadow: 0 10px 30px rgba(74, 0, 224, 0.2);
+}
+
+.service-details {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease;
+}
+
+.details-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #4a00e0;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+/* Professional Card Enhancements */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn.active {
+  color: #ff4757;
+}
+
+.favorite-btn:hover {
+  color: #ff4757;
+  transform: scale(1.1);
+}
+
+.share-btn {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4a00e0;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #4a00e0;
+  color: white;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.2rem;
+  color: #ffc107;
+}
+
+.testimonial-rating .filled {
+  fill: #ffc107;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+}
+
+/* App Banner */
+.app-banner {
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-text {
+  max-width: 600px;
+}
+
+.app-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.app-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-download {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.app-download img {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.app-image img {
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+  background: #2a2a2a;
+  color: white;
+  padding: 3rem 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after, .footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #4a00e0;
+}
+
+.footer-section p {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #4a00e0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4a00e0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #4a00e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .nav-menu.open {
+    left: 0;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .app-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-buttons {
+    justify-content: center;
+  }
+  
+  .app-image {
+    margin-top: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Google Auth Button Styles */
+.google-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background: white;
+  color: #1f1717;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-auth-btn:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.google-auth-btn:active {
+  background: #f1f1f1;
+}
+
+.google-icon {
+  font-size: 1.2rem;
+}
+
+/* Divider for "or" text */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.auth-divider::before {
+  margin-right: 1rem;
+}
+
+.auth-divider::after {
+  margin-left: 1rem;
+}
